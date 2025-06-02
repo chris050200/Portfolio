@@ -1,7 +1,4 @@
 title: Christopher Vallone
-plugins:
-  - jekyll-remote-theme
-
-# set up remote_theme
-remote_theme: jekyll/minima
-
+theme: minima
+minima:
+  skin: classic
