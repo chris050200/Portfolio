@@ -1,7 +1,29 @@
+/* Dark mode override */
 body {
-  background-color: #121212;
-  color: #eeeeee;
+  background-color: #111;
+  color: #eaeaea;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 a {
+  color: #00ffc3;
+}
+
+.site-header, .site-footer {
+  background-color: #181818;
+  color: #ccc;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+.post-content code {
+  background-color: #222;
+  color: #00ff99;
+}
+
+.site-title, .site-title a {
   color: #00ffc3;
 }
