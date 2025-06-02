@@ -26,9 +26,9 @@ h1, h2, h3 {
   margin-bottom: 0.5rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 1.8rem; color: #79c0ff !important; }
-h3 { font-size: 1.4rem; }
+h1 { font-size: 22.5rem; }
+h2 { font-size: 21.8rem; color: #79c0ff !important; }
+h3 { font-size: 21.4rem; }
 
 /* Paragraphs and lists */
 p, ul, li {
