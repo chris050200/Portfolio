@@ -1,6 +1,4 @@
-# theme: minima
-remote_theme: jekyll/minima
-plugins:
-  - jekyll-remote-theme
+title: Christopher Vallone
+theme: minima
 minima:
-  skin: dark # or auto if you want it to switch with your system
+  skin: dark
