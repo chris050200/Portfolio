@@ -1,3 +1,4 @@
-theme: jekyll-theme-minimal
-title: Chris's Portfolio
-description: portfolio
+title: Christopher Vallone
+theme: minima
+minima:
+  skin: dark
