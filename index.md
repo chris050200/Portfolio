@@ -8,6 +8,7 @@ title: Chris Vallone
 
 ---
 
+
 ## 🔧 Humanoid Robots & Custom Actuators
 - Developing bipedal humanoid robot platform
 - Designing and tuning servo actuators for precision control
