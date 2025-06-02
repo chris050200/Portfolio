@@ -1,8 +1,6 @@
-/* Dark mode override */
 body {
-  background-color: #111;
-  color: #eaeaea;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: black;
+  color: white ;
 }
 
 a {
