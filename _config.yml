@@ -2,3 +2,6 @@ title: Christopher Vallone
 theme: minima
 minima:
   skin: classic
+
+include:
+  - _includes/head-custom.html
