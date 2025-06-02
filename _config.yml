@@ -1,6 +1,6 @@
 title: Christopher Vallone
-theme: minima
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
 minima:
   skin: dark
-
-remote_theme: jekyll/minima
