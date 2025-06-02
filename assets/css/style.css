@@ -60,6 +60,23 @@ a:hover {
   text-decoration: underline;
 }
 
+
+.image-gallery {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 30%;
+  min-width: 200px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  object-fit: cover;
+}
+
 /* Optional: make it a little more readable on small screens */
 @media (max-width: 768px) {
   main.container {
