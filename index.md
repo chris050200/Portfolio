@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 title: Chris Vallone
 ---
 
@@ -50,4 +50,3 @@ title: Chris Vallone
 ## 🎖️ Senior Design – Military Power Supply for SynQor
 - Designed 180V, 20A rugged power supply
 - Worked with high-voltage circuitry and EMI/thermal constraints
-
