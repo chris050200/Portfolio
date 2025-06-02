@@ -2,6 +2,7 @@
 layout: default
 title: Chris Vallone
 ---
+<div class="markdown-body">
 
 # Chris Vallone  
 ### Ongoing Projects in Robotics, Mechanical Design & Embedded Systems
