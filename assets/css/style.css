@@ -1,10 +1,8 @@
-
-/* GLOBAL DARK MODE STYLES */
-body {
-  background-color: #0a0a0a;
-  color: #e2e2e2;
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
+/* DARK MODE STYLES — Full Override */
+html, body {
+  background-color: #0d1117;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -12,53 +10,59 @@ body {
 main.container {
   max-width: 850px;
   margin: auto;
-  padding: 3rem 2rem;
+  padding: 2rem;
+  background-color: #0d1117;
 }
 
-/* HEADINGS - neon glow */
+/* Headings */
 h1, h2, h3 {
-  color: #00ffc3;
-  text-shadow: 0 0 6px rgba(0, 255, 195, 0.3);
+  color: #58a6ff;
   margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.25rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-  color: #66ffcc;
+  font-size: 1.8rem;
+  color: #79c0ff;
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
-/* PARAGRAPH AND TEXT */
+/* Paragraphs and lists */
 p {
-  margin: 1rem 0;
-  color: #d0d0d0;
+  color: #c9d1d9;
+  margin-bottom: 1rem;
 }
 
 ul {
   padding-left: 1.2rem;
+  color: #c9d1d9;
 }
 
 ul li {
   margin-bottom: 0.5rem;
 }
 
-/* LINKS */
+/* Links */
 a {
   color: #58a6ff;
   text-decoration: none;
-  transition: color 0.3s ease;
 }
 
 a:hover {
   color: #8ab4f8;
-  text-shadow: 0 0 5px #58a6ff;
+  text-decoration: underline;
+}
+
+/* Optional: make it a little more readable on small screens */
+@media (max-width: 768px) {
+  main.container {
+    padding: 1rem;
+  }
 }
