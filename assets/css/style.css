@@ -1,1 +1,64 @@
 
+/* GLOBAL DARK MODE STYLES */
+body {
+  background-color: #0a0a0a;
+  color: #e2e2e2;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+main.container {
+  max-width: 850px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+/* HEADINGS - neon glow */
+h1, h2, h3 {
+  color: #00ffc3;
+  text-shadow: 0 0 6px rgba(0, 255, 195, 0.3);
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #66ffcc;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+/* PARAGRAPH AND TEXT */
+p {
+  margin: 1rem 0;
+  color: #d0d0d0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* LINKS */
+a {
+  color: #58a6ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #8ab4f8;
+  text-shadow: 0 0 5px #58a6ff;
+}
