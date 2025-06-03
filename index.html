@@ -6,7 +6,7 @@
   <title>Chris Vallone | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Quick‑override tweaks for extra breathing room -->
+  <!-- Quick‑override tweaks for extra breathing room & larger media -->
   <style>
     section.project {
       margin: 4rem 0;
@@ -22,8 +22,32 @@
       font-style: italic;
       color: #8b949e;
     }
+    /* Bigger videos */
     .video-gallery {
-      margin: 2.5rem 0 3.5rem;
+      margin: 3rem 0 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+    .video-gallery iframe {
+      width: 100%;
+      max-width: 960px;
+      aspect-ratio: 16/9;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+    /* Full‑width analysis images */
+    .full-img {
+      width: 100%;
+      max-width: 980px;
+      display: block;
+      margin: 0.75rem auto;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      object-fit: cover;
     }
   </style>
 </head>
@@ -45,7 +69,7 @@
 
       <div class="image-gallery">
         <img src="assets/robots/robot1.jpg" alt="Early biped prototype on static stand" />
-        <img src="assets/robots/robot2.jpg" alt="Close‑up of knee actuator test rig" />
+        <img src="assets/robots/robot2.jpg" alt="Close-up of knee actuator test rig" />
         <img src="assets/robots/robot3.jpg" alt="PID tuning session in the lab" />
       </div>
       <figcaption>Concept through bench‑top validation of the lower‑limb actuator stack.</figcaption>
@@ -54,23 +78,17 @@
     <!-- Videos -->
     <div class="video-gallery">
       <iframe
-        width="720"
-        height="405"
         src="https://www.youtube.com/embed/-KSJEGBW04A"
         title="Biped walking – early test"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="width: 100%; max-width: 720px; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); display: block; margin: auto;"
-      ></iframe>
+        allowfullscreen>
+      </iframe>
       <iframe
-        width="720"
-        height="405"
         src="https://www.youtube.com/embed/6M4V2va83pI"
         title="Reinforcement learning locomotion clip"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        style="width: 100%; max-width: 720px; border: 1px solid #30363d; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); display: block; margin: auto;"
-      ></iframe>
+        allowfullscreen>
+      </iframe>
     </div>
     <figcaption>Motion control algorithms developed in NVIDIA Isaac Gym and transferred to hardware.</figcaption>
 
@@ -82,20 +100,14 @@
         <strong>90 Nm peak</strong> torque envelope.
       </p>
 
-      <div class="image-gallery">
-        <img src="assets/actuators/Freebodydiagram1.JPG" alt="Hand‑drawn free‑body diagram resolving gear forces" />
-        <img src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
-        <img src="assets/actuators/actuatordiagram2.JPG" alt="Bearing reaction load map" />
-      </div>
+      <img class="full-img" src="assets/actuators/Freebodydiagram1.JPG" alt="Hand‑drawn free‑body diagram resolving gear forces" />
+      <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
+      <img class="full-img" src="assets/actuators/actuatordiagram2.JPG" alt="Bearing reaction load map" />
+
       <figcaption>
         Free‑body checks back up the FEA—everything under <strong>28 % of yield</strong> with
         <strong>1.5×</strong> safety.
       </figcaption>
-
-      <div class="image-gallery">
-        <img src="assets/actuators/actuatordiagram3.JPG" alt="Temperature gradient slice after 15 min endurance run" />
-      </div>
-      <figcaption>Thermal simulation keeps windings under 80 °C on a 25 °C day.</figcaption>
     </section>
 
     <!-- Cross sections -->
@@ -122,7 +134,7 @@
 
     <!-- Rocket Test Stands -->
     <section class="project">
-      <h3>🚀 UT Dallas – Bates Propulsion Labs</h3>
+      <h3>🚀 UT Dallas – Bates Propulsion Labs</h3>
       <p>
         <strong>Test Stand Design &amp; Fabrication</strong><br />
         Designed and built structural test rigs for rocket propulsion systems.<br />
@@ -163,29 +175,4 @@
 
       <div class="image-gallery">
         <img src="assets/images/rocket1.jpg" alt="Water jacket CAD section" />
-        <img src="assets/images/rocket2.jpg" alt="CNC machined liner halfway through finishing pass" />
-        <img src="assets/images/rocket3.jpg" alt="Completed water‑jacket pressure test at 300 psi" />
-      </div>
-      <figcaption>Kept ΔT across chamber wall under 35 °C at 10 kN thrust.</figcaption>
-    </section>
-
-    <!-- Metal Printer -->
-    <section class="project">
-      <h3>🧪 3D Metal Printer – Induction Heated Liquid Metal</h3>
-      <p>
-        Built an experimental deposition system that spits <strong>750 °C</strong> aluminum droplets along a
-        G‑code path.
-      </p>
-    </section>
-
-    <!-- Formula SAE -->
-    <section class="project">
-      <h3>⚡ Electric Car Firmware (Formula SAE)</h3>
-      <p>
-        Wrote real‑time CAN firmware controlling traction inverter, BMS comms, and shutdown loops.
-      </p>
-    </section>
-
-    <!-- Senior Design -->
-    <section class="project">
-      <h3>🎖️ Senior Design – Military Power Supply for SynQor</
+        <img src="assets/images/
