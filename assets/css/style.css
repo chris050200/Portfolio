@@ -1,55 +1,60 @@
-/* DARK MODE STYLES — Full Override */
+/* --------------------
+   DARK MODE THEME
+-------------------- */
 html, body {
   background-color: #0d1117;
   color: #e6edf3;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 main.container {
-  max-width: 850px;
+  max-width: 980px;
   margin: auto;
   padding: 2rem;
-  background-color: #0d1117;
 }
 
-/* Headings */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* --------------------
+   TYPOGRAPHY
+-------------------- */
 h1, h2, h3 {
   color: #58a6ff;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
 }
 
 h2 {
   font-size: 1.8rem;
   color: #79c0ff;
+  margin-top: 0;
 }
 
 h3 {
   font-size: 1.4rem;
 }
 
-/* Paragraphs and lists */
-p {
+p, li {
   color: #c9d1d9;
-  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 ul {
   padding-left: 1.2rem;
-  color: #c9d1d9;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Links */
+/* --------------------
+   LINKS
+-------------------- */
 a {
   color: #58a6ff;
   text-decoration: none;
@@ -60,26 +65,60 @@ a:hover {
   text-decoration: underline;
 }
 
-
+/* --------------------
+   IMAGE GALLERIES
+-------------------- */
 .image-gallery {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
   margin: 1rem 0;
-  flex-wrap: wrap;
 }
 
 .image-gallery img {
-  width: 30%;
-  min-width: 200px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   object-fit: cover;
 }
 
-/* Optional: make it a little more readable on small screens */
+figcaption {
+  color: #8b949e;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: -0.5rem 0 1.5rem;
+}
+
+/* --------------------
+   VIDEO EMBEDS
+-------------------- */
+.video-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.video-gallery iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+@media (min-width: 900px) {
+  .video-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------
+   RESPONSIVE LAYOUT
+-------------------- */
 @media (max-width: 768px) {
   main.container {
     padding: 1rem;
   }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.5rem; }
 }
