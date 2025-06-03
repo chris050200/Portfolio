@@ -91,24 +91,30 @@ figcaption {
 }
 
 /* --------------------
-   VIDEO EMBEDS
+   VIDEO EMBEDS (updated)
 -------------------- */
 .video-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  margin: 1rem 0;
+  justify-content: center;
 }
 
 .video-gallery iframe {
+  flex: 1 1 480px; /* grow, shrink, base width */
+  min-width: 280px;
   width: 100%;
   aspect-ratio: 16/9;
+  height: auto; /* keeps ratio in browsers without aspect-ratio support */
   border: 1px solid #30363d;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 @media (min-width: 900px) {
-  .video-gallery {
-    grid-template-columns: repeat(2, 1fr);
+  .video-gallery iframe {
+    flex: 0 1 calc(50% - 0.5rem);
   }
 }
 
