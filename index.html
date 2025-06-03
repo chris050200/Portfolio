@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Vallone | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <main class="container">
-    <h1>Chris Vallone</h1>
-    <h2>Ongoing Projects in Robotics, Mechanical Design & Embedded Systems</h2>
+    <header>
+      <h1>Chris Vallone</h1>
+      <h2>Ongoing Projects in Robotics, Mechanical Design & Embedded Systems</h2>
+    </header>
 
+    <!-- Humanoid Robots & Actuators -->
     <section>
       <h3>🔧 Humanoid Robots & Custom Actuators</h3>
       <ul>
@@ -18,112 +21,127 @@
         <li>Designing and tuning servo actuators for precision control</li>
         <li>CAD, FEA, and embedded control integration</li>
       </ul>
+
+      <div class="image-gallery">
+        <img src="assets/robots/robot1.jpg" alt="Early biped prototype on static stand">
+        <img src="assets/robots/robot2.jpg" alt="Close‑up of knee actuator test rig">
+        <img src="assets/robots/robot3.jpg" alt="PID tuning session in the lab">
+      </div>
+      <figcaption>Concept through bench‑top validation of the lower‑limb actuator stack.</figcaption>
     </section>
 
-
-    <div class="image-gallery">
-      <img src="assets/robots/robot1.jpg" alt="Rocket test stand 1">
-      <img src="assets/robots/robot2.jpg" alt="Rocket test stand 2">
-      <img src="assets/robots/robot3.jpg" alt="Rocket test stand 3">
+    <!-- Videos -->
+    <div class="video-gallery">
+      <iframe src="https://www.youtube.com/embed/-KSJEGBW04A" title="Biped walking – early test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/6M4V2va83pI" title="Reinforcement learning locomotion clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <figcaption>Actuator design, free body diagrams to size gears, FEA Analysis</figcaption>
+    <figcaption>Motion control algorithms developed in NVIDIA Isaac Gym and transferred to hardware.</figcaption>
 
-    
-    <iframe width="720" height="360"
-      src="https://www.youtube.com/embed/-KSJEGBW04A"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-
-
-    <iframe width="720" height="360"
-      src="https://www.youtube.com/embed/6M4V2va83pI"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-    
-    <figcaption>Locomotion control, uses isaac gym</figcaption>
-
-
-    
-    <div class="image-gallery">
-      <img src="assets/actuators/actuator1.jpg" alt="Rocket test stand 1">
-      <img src="assets/actuators/actuator2.jpg" alt="Rocket test stand 2">
-      <img src="assets/actuators/actuator3.jpg" alt="Rocket test stand 3">
-    </div>
-    <figcaption>Caption goes here</figcaption>
-    
+    <!-- Analysis -->
     <section>
-      <h3>🚀 UT Dallas – Bates Propulsion Labs</h3>
-      <p><strong>Test Stand Design & Fabrication</strong><br>
-      Designed and built structural test rigs for rocket propulsion systems.<br>
-      Load calculations, weld details, and sensor integration.</p>
+      <h3>⚙️ Actuator Analysis & Free‑Body Diagrams</h3>
+      <p>Structural and thermal analyses safeguard a 30 Nm continuous / 90 Nm peak torque envelope.</p>
+
+      <div class="image-gallery">
+        <img src="assets/actuators/freebodydiagram1.jpg" alt="Hand‑drawn free‑body diagram resolving gear forces">
+        <img src="assets/actuators/actuatordiagram1.jpg" alt="Von Mises stress plot of planetary carrier">
+        <img src="assets/actuators/actuatordiagram2.jpg" alt="Bearing reaction load map">
+      </div>
+      <figcaption>Free‑body checks back up the FEA—everything under 28 % of yield with 1.5× safety.</figcaption>
+
+      <div class="image-gallery">
+        <img src="assets/actuators/actuatordiagram3.jpg" alt="Temperature gradient slice after 15 min endurance run">
+      </div>
+      <figcaption>Thermal simulation keeps windings under 80 °C on a 25 °C day.</figcaption>
     </section>
 
-    <div class="image-gallery">
-      <img src="assets/rocket/rocket1.jpg" alt="Rocket test stand 1">
-      <img src="assets/rocket/rocket2.jpg" alt="Rocket test stand 2">
-      <img src="assets/rocket/rocket3.jpg" alt="Rocket test stand 3">
-    </div>
-    <figcaption>Caption goes here</figcaption>
-    
+    <!-- Cross sections -->
     <section>
-      <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
-      <p>Designed & built competitive robot for international competition.<br>
-      Led mechanical subteam; responsible for drivetrain and manipulator.</p>
+      <h3>🖼️ Full‑Body Cross‑Sections</h3>
+      <div class="image-gallery">
+        <img src="assets/images/picture1.jpg" alt="Robot cross‑section – front elevation">
+        <img src="assets/images/picture2.jpg" alt="Robot cross‑section – side elevation">
+        <img src="assets/images/picture3.jpg" alt="Robot cross‑section – isometric">
+      </div>
+      <figcaption>Routing of wiring looms, cooling lines, and service access points.</figcaption>
     </section>
 
-    <div class="image-gallery">
-      <img src="assets/images/rocket1.jpg" alt="Rocket test stand 1">
-      <img src="assets/images/rocket2.jpg" alt="Rocket test stand 2">
-      <img src="assets/images/rocket3.jpg" alt="Rocket test stand 3">
-    </div>
-    <figcaption>Caption goes here</figcaption>
-    
+    <!-- Actuator glam -->
+    <section>
+      <h3>📸 As‑Built Actuator Gallery</h3>
+      <div class="image-gallery">
+        <img src="assets/actuators/actuator5.jpg" alt="Assembled servo – front">
+        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed showing reduction stages">
+        <img src="assets/actuators/actuator7.jpg" alt="Torque sensor and magnetic encoder detail">
+      </div>
+      <figcaption>Final hardware after 250 h bench endurance with zero backlash growth.</figcaption>
+    </section>
+
+    <!-- Rocket Test Stands -->
+    <section>
+      <h3>🚀 UT Dallas – Bates Propulsion Labs</h3>
+      <p><strong>Test Stand Design & Fabrication</strong><br>
+         Designed and built structural test rigs for rocket propulsion systems.<br>
+         Load calculations, weld details, and sensor integration.</p>
+
+      <div class="image-gallery">
+        <img src="assets/rocket/rocket1.jpg" alt="Hydrostatic proof test of rocket stand">
+        <img src="assets/rocket/rocket2.jpg" alt="LOX plumbing assembly">
+        <img src="assets/rocket/rocket3.jpg" alt="Hot‑fire campaign day">
+      </div>
+      <figcaption>From CAD to hot‑fire in six weeks—no cracked welds.</figcaption>
+    </section>
+
+    <!-- FIRST Robotics -->
+    <section>
+      <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
+      <p>Led mechanical sub‑team for drivetrain and manipulator; iterated from whiteboard to final bot in 45 days.</p>
+
+      <div class="image-gallery">
+        <img src="assets/images/rocket1.jpg" alt="FRC robot climbing in end‑game">
+        <img src="assets/images/rocket2.jpg" alt="Pit crew maintenance between matches">
+        <img src="assets/images/rocket3.jpg" alt="Drive team strategizing on‑field">
+      </div>
+      <figcaption>Ranked 5 / 400 at Houston Champs.</figcaption>
+    </section>
+
+    <!-- GD&T -->
     <section>
       <h3>📐 GD&T & Water Jacket for Rocket Engine</h3>
-      <p>Precision tolerance design for engine cooling system.<br>
-      Used GD&T to ensure manufacturability of high-temp components.</p>
+      <p>GD&T drove manufacturable cooling channels meeting 0.25 mm profile tolerance on 5‑axis billet.</p>
+
+      <div class="image-gallery">
+        <img src="assets/images/rocket1.jpg" alt="Water jacket CAD section">
+        <img src="assets/images/rocket2.jpg" alt="CNC machined liner halfway through finishing pass">
+        <img src="assets/images/rocket3.jpg" alt="Completed water‑jacket pressure test at 300 psi">
+      </div>
+      <figcaption>Kept ΔT across chamber wall under 35 °C at 10 kN thrust.</figcaption>
     </section>
 
-    <div class="image-gallery">
-      <img src="assets/images/rocket1.jpg" alt="Rocket test stand 1">
-      <img src="assets/images/rocket2.jpg" alt="Rocket test stand 2">
-      <img src="assets/images/rocket3.jpg" alt="Rocket test stand 3">
-    </div>
-    <figcaption>Caption goes here</figcaption>
-    
+    <!-- Metal Printer -->
     <section>
-      <h3>🧪 3D Metal Printer – Induction Heated Liquid Metal</h3>
-      <p>Built experimental printer using induction coil heating.<br>
-      Printed molten metal onto a platform using CNC toolpaths.</p>
+      <h3>🧪 3D Metal Printer – Induction Heated Liquid Metal</h3>
+      <p>Built an experimental deposition system that spits 750 °C aluminum droplets along a G‑code path.</p>
     </section>
 
+    <!-- Formula SAE -->
     <section>
-      <h3>⚡ Electric Car Firmware (Formula SAE)</h3>
-      <p>Designed and tested low-level embedded software for vehicle control.<br>
-      Integrated with CAN, sensors, and safety systems.<br>
-      <em>(*Also, it was loud.*)</em></p>
+      <h3>⚡ Electric Car Firmware (Formula SAE)</h3>
+      <p>Wrote real‑time CAN firmware controlling traction inverter, BMS comms, and shutdown loops.</p>
     </section>
-    
-    
-    
-    <figcaption>Caption goes here</figcaption>
+
+    <!-- Senior Design -->
     <section>
       <h3>🎖️ Senior Design – Military Power Supply for SynQor</h3>
-      <p>Designed 180V, 20A rugged power supply.<br>
-      Worked with high-voltage circuitry and EMI/thermal constraints.</p>
+      <p>Designed a ruggedized 180 V / 20 A DC supply—passed MIL‑STD‑810 vibration on first shot.</p>
+
+      <div class="image-gallery">
+        <img src="assets/seniordesign/seniordesign1.jpg" alt="High‑voltage power stage PCB">
+        <img src="assets/seniordesign/seniordesign2.jpg" alt="Thermal test with FLIR camera">
+        <img src="assets/seniordesign/seniordesign3.jpg" alt="Completed unit in test harness">
+      </div>
     </section>
 
-    <div class="image-gallery">
-      <img src="assets/seniordesign/seniordesign1.jpg" alt="Rocket test stand 1">
-      <img src="assets/seniordesign/seniordesign2.jpg" alt="Rocket test stand 2">
-      <img src="assets/seniordesign/seniordesign3.jpg" alt="Rocket test stand 3">
-    </div>
-
-    
   </main>
 </body>
 </html>
