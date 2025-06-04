@@ -1,45 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chris Vallone | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <!-- Font for cleaner UI -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Quick-override tweaks for extra breathing room & larger media -->
+  <!-- Quick‑override tweaks for extra breathing room & larger media -->
   <style>
-    :root {
-      --border: #30363d;
-      --text-muted: #8b949e;
-      --bg: #0d1117;
-      --fg: #c9d1d9;
-      --fg-strong: #f0f6fc;
-    }
-
-    /* Base */
-    html,body {
-      margin: 0;
-      padding: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-    }
-    h1, h2, h3 {
-      color: var(--fg-strong);
-      margin-top: 0;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    /* Section rhythm */
     section.project {
       margin: 4rem 0;
       padding-bottom: 2rem;
@@ -48,39 +17,12 @@
     section.project:last-of-type {
       border-bottom: none;
     }
-
     figcaption {
-      margin: 0.75rem auto 2.25rem;
-      max-width: 960px;
+      margin-top: 0.75rem;
+      margin-bottom: 2.25rem;
       font-style: italic;
-      color: var(--text-muted);
-      text-align: center;
+      color: #8b949e;
     }
-
-    /* Image/gallery rules */
-    .image-gallery {
-      margin: 2rem 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .image-gallery img {
-      width: 100%;
-      max-width: 480px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-      object-fit: cover;
-    }
-    /* Specific sizing tweaks */
-    .half-size {
-      max-width: 240px; /* half of default 480 */
-    }
-    .shrink-30 {
-      max-width: 336px; /* ~70% of default 480 */
-    }
-
     /* Bigger videos */
     .video-gallery {
       margin: 3rem 0 4rem;
@@ -93,28 +35,21 @@
       width: 100%;
       max-width: 960px;
       aspect-ratio: 16/9;
-      border: 1px solid var(--border);
+      border: 1px solid #30363d;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     }
-
-    /* Full-width analysis images */
+    /* Full‑width analysis images */
     .full-img {
       width: 100%;
       max-width: 980px;
       display: block;
       margin: 0.75rem auto;
-      border: 1px solid var(--border);
+      border: 1px solid #30363d;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       object-fit: cover;
     }
-
-    /* Lists */
-    ul {
-      padding-left: 1.25rem;
-    }
-    ul li + li { margin-top: 0.5rem; }
   </style>
 </head>
 <body>
@@ -128,134 +63,165 @@
     <section class="project">
       <h3>🔧 Humanoid Robots &amp; Custom Actuators</h3>
       <ul>
-        <li><strong>Developing</strong> a bipedal humanoid robot platform</li>
+        <li><strong>Developing</strong> bipedal humanoid robot platform</li>
         <li><strong>Designing</strong> and tuning servo actuators for precision control</li>
-        <li>CAD, FEA, and embedded-control integration</li>
-        <li>Mechanical &amp; manufacturing engineering, DFM, cost minimisation</li>
+        <li>CAD, FEA, and embedded control integration</li>
+        <li>Mechanical engineering, Manufacturing engineering, DFM, cost minimzation</li>
       </ul>
 
       <div class="image-gallery">
-        <img class="shrink-30" src="assets/robots/robot2.jpg" alt="Knee actuator test rig – early prototype" />
+        <img src="assets/robots/robot2.jpg" alt="Close-up of knee actuator test rig" />
       </div>
 
       <ul>
-        <li>Design goal: go anywhere a human can (locomotion) and do anything a human can (manipulation up to 20 kg boxes)</li>
+        <li>Design Constraints: Go anywhere a human can go (Locomotion), do anything a human can do (manipulation, boxes, etc) </li>
       </ul>
+    
     </section>
 
     <!-- Analysis -->
     <section class="project">
-      <h3>⚙️ Actuator Analysis &amp; Free-Body Diagrams</h3>
+      <h3>⚙️ Actuator Analysis &amp; Free‑Body Diagrams</h3>
       <p>
-        Each joint is driven by an actuator that mimics human muscle pairs, using BLDC FOC control and >93 % efficient gearing.
+        Joints use actuators designed to mimic human force & motion control. Uses BLDC FOC Control & high efficiency gearing.
       </p>
 
-      <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
+      <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
       <figcaption>
-        Optimised for a <strong>$300</strong> BOM using commodity bearings and 3-D-printed PLA parts—versus <s>$8 000</s> for comparable COTS units.
+        Optimized to minimize BOM cost. Uses commodity parts, bearings and PLA plastic parts. BOM cost of <strong> $300 </strong> per actuator. vs. $8000 for COTS
       </figcaption>
       
       <p>
-        Structural analysis validates a <strong>30 Nm continuous</strong> / <strong>90 Nm peak</strong> torque envelope.
+        Structural analysis safeguards a <strong>30 Nm continuous</strong> /
+        <strong>90 Nm peak</strong> torque envelope.
       </p>
-      <img class="full-img" src="assets/actuators/Freebodydiagram1.JPG" alt="Hand-drawn free-body diagram resolving gear forces" />
+      <img class="full-img" src="assets/actuators/Freebodydiagram1.JPG" alt="Hand‑drawn free‑body diagram resolving gear forces" />
+      
       <figcaption>
-        Hand calculations back up the FEA—max stresses stay below <strong>28 % of yield</strong> with a <strong>1.5×</strong> safety margin.
+        Free‑body checks back up the FEA—everything under <strong>28 % of yield</strong> with
+        <strong>1.5×</strong> safety.
       </figcaption>
     </section>
 
     <!-- Cross sections -->
     <section class="project">
-      <h3>🖼️ Full-Body Cross-Sections</h3>
+      <h3>🖼️ Full‑Body Cross‑Sections</h3>
       <p>
-        The chassis packages battery, power distribution, IMU, compute, and wire manifolding in a 45 mm-thin torso.
+        Chassis packages battery, power distribution, IMU, computer, wire manifolding
       </p>
       <div class="image-gallery">
-         <img src="assets/actuators/Picture2.jpg" alt="Robot cross-section – front elevation" />
-         <img src="assets/actuators/Picture3.jpg" alt="Robot cross-section – side elevation" />
+         <img src="assets/actuators/Picture2.jpg" alt="Robot cross‑section – front elevation" />
+         <img src="assets/actuators/Picture3.jpg" alt="Robot cross‑section – side elevation" />
       </div>
 
       <p>
-        Actuators are integrated into four serial-rotary chains to keep limbs fully back-drivable.
+        Actuators are integrated into serial rotary chains. 4 branches.
       </p>
 
       <div class="image-gallery">
-          <img class="half-size" src="assets/actuators/Picture1.jpg" alt="Robot cross-section – exploded detail" />
+          <img src="assets/actuators/Picture1.jpg" alt="Robot cross‑section – front elevation" />
       </div>
-
+      
       <div class="image-gallery">
-        <img src="assets/actuators/Picture5.jpg" alt="Robot wiring – torso front" />
-        <img src="assets/actuators/Picture6.jpg" alt="Robot wiring – torso side" />
-        <img src="assets/actuators/Picture7.jpg" alt="Robot wiring – isometric" />
+        
+
+
+        <img src="assets/actuators/Picture5.jpg" alt="Robot cross‑section – front elevation" />
+        <img src="assets/actuators/Picture6.jpg" alt="Robot cross‑section – side elevation" />
+        <img src="assets/actuators/Picture7.jpg" alt="Robot cross‑section – isometric" />
       </div>
-      <figcaption>Wire &amp; connector routing revealed in semi-transparent overlays.</figcaption>
+      <figcaption> Routing of wires, connectors</figcaption>
     </section>
 
+    
     <!-- Videos -->
     <section class="project">
-      <h3>🤖 Simulation-to-Reality Locomotion</h3>
       <p>
-        Reinforcement-learning policies are trained in NVIDIA Isaac Gym and deployed to physical hardware with &lt;5 ms inference latency.
+        Uses RL for locomotion. Robots learn to walk in simulation and a neural net is transferred from sim to real. Optimized to inference on edge hardware under 5ms
       </p>
       <div class="video-gallery">
-        <iframe src="https://www.youtube.com/embed/-KSJEGBW04A" title="Biped walking – early test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube.com/embed/6M4V2va83pI" title="Reinforcement learning locomotion clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/-KSJEGBW04A"
+          title="Biped walking – early test"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <iframe
+          src="https://www.youtube.com/embed/6M4V2va83pI"
+          title="Reinforcement learning locomotion clip"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
-      <figcaption>From zero-shot sim to stable real-world gait within 40 minutes of calibration.</figcaption>
-    </section>
+      <figcaption>Motion control algorithms developed in NVIDIA Isaac Gym and transferred to hardware.</figcaption>
+   </section>
 
+
+    
     <!-- Actuator glam -->
     <section class="project">
-      <h3>📸 As-Built Actuator Gallery</h3>
+      <h3>📸 As‑Built Actuator Gallery</h3>
       <div class="image-gallery">
         <img src="assets/actuators/actuator5.jpg" alt="Assembled servo – front" />
-        <img src="assets/actuators/actuator6.jpg" alt="Back cover removed to show reduction stages" />
+        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed showing reduction stages" />
         <img src="assets/actuators/actuator7.jpg" alt="Torque sensor and magnetic encoder detail" />
       </div>
-      <figcaption>Final hardware after a two-hour bench endurance burn-in.</figcaption>
+      <figcaption>Final hardware after 2h bench endurance</figcaption>
     </section>
 
     <!-- Rocket Test Stands -->
     <section class="project">
-      <h3>🚀 UT-Dallas Bates Propulsion Lab – Rocket Test Rigs</h3>
+      <h3>🚀 UT Dallas – Bates Propulsion Labs Rocket Team</h3>
       <p>
-        <strong>Role:</strong> structural design &amp; fabrication. Built load-tested stands for rocket propulsion systems, integrating sensors and LOX plumbing.
+        <strong>Test Stand Design &amp; Fabrication</strong><br />
+        Designed and built structural test rigs for rocket propulsion systems.<br />
+        Load calculations, welds, and sensor integration.
       </p>
+
       <div class="image-gallery">
         <img src="assets/rocket/rocket1.jpg" alt="Hydrostatic proof test of rocket stand" />
         <img src="assets/rocket/rocket3.jpg" alt="LOX plumbing assembly" />
       </div>
-      <figcaption>From CAD to hot-fire in six months—no cracked welds.</figcaption>
+      <figcaption>From CAD to hot‑fire in six months—no cracked welds.</figcaption>
     </section>
 
-    <div class="video-gallery">
-      <iframe src="https://www.youtube.com/embed/0VU4w6sr3rM" title="Rocket Engine Test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     <div class="video-gallery">
+      <iframe
+        src="https://www.youtube.com/embed/0VU4w6sr3rM"
+        title="Rocket Engine Test"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
-    <figcaption>Static fire test – 1,100 lbf on ethanol/LOX.</figcaption>
+    <figcaption>Static fire test video.</figcaption>
 
     <!-- GD&T -->
     <section class="project">
-      <h3>📐 GD&amp;T – Water-Jacketed Rocket Chamber</h3>
+      <h3>📐 GD&amp;T &amp; Made & delivered a rawing for a Water Jacket for Rocket Engine</h3>
       <p>
-        Delivered detailed drawings with <strong>0.25 mm profile tolerance</strong> on a multi-start lathe process.
+        GD&amp;T   <strong>0.25 mm profile tolerance</strong> on
+        lathe
       </p>
+
       <div class="image-gallery">
         <img src="assets/rocket/rocket7.jpg" alt="Water jacket CAD section" />
-      </div>
-    </section>
+       
 
+      </section>
+
+    
     <!-- FIRST Robotics -->
     <section class="project">
-      <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
+      <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
       <p>
-        Led mechanical sub-team for drivetrain &amp; manipulator; iterated from whiteboard to final bot in <strong>45 days</strong>.
+        Led mechanical sub‑team for drivetrain and manipulator; iterated from whiteboard to final bot in
+        <strong>45 days</strong>.
       </p>
-      <div class="image-gallery">
-        <img src="assets/robots/robot8.jpg" alt="FRC robot climbing in end-game" />
-      </div>
-      <figcaption>Ranked 5th out of 30 000+ students at Houston Champs.</figcaption>
-    </section>
 
-  </main>
-</body>
-</html>
+      <div class="image-gallery">
+        <img src="assets/robots/robot8.jpg" alt="FRC robot climbing in end‑game" />
+       
+      </div>
+      <figcaption>Ranked 5 at Houston Champs.</figcaption>
+    </section>
