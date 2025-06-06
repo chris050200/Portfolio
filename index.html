@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,7 +6,7 @@
   <title>Chris Vallone | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Quick‑override tweaks for extra breathing room & larger media -->
+  <!-- Quick-override tweaks for extra breathing room & larger media -->
   <style>
     section.project {
       margin: 4rem 0;
@@ -39,7 +38,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     }
-    /* Full‑width analysis images */
+    /* Full-width analysis images */
     .full-img {
       width: 100%;
       max-width: 980px;
@@ -50,10 +49,23 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
       object-fit: cover;
     }
+    /* Intro note banner */
+    section.objective {
+      margin: 2.5rem 0 3rem;
+      padding: 1.75rem 1.5rem;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      background: #161b22;
+    }
   </style>
 </head>
 <body>
   <main class="container">
+    <!-- Intro note -->
+    <section class="objective">
+      <p>I’m an electrical engineer shifting my focus toward mechanical design. As I apply to MSME programs for 2026, I’m seeking projects and roles where control systems, power electronics, and solid hardware meet.</p>
+    </section>
+
     <header>
       <h1><strong>Chris Vallone</strong></h1>
       <h2>Ongoing Projects in <strong>Robotics</strong>, <strong>Mechanical Design</strong> &amp; <strong>Embedded Systems</strong></h2>
@@ -66,7 +78,7 @@
         <li><strong>Developing</strong> bipedal humanoid robot platform</li>
         <li><strong>Designing</strong> and tuning servo actuators for precision control</li>
         <li>CAD, FEA, and embedded control integration</li>
-        <li>Mechanical engineering, Manufacturing engineering, DFM, cost minimzation</li>
+        <li>Mechanical engineering, manufacturing engineering, DFM, cost minimization</li>
       </ul>
 
       <div class="image-gallery">
@@ -74,32 +86,29 @@
       </div>
 
       <ul>
-        <li>Design Constraints: Go anywhere a human can go (Locomotion), do anything a human can do (manipulation, boxes, etc) </li>
+        <li>Design goal: go anywhere a human can go (locomotion) and handle everyday manipulation tasks.</li>
       </ul>
-    
     </section>
 
     <!-- Analysis -->
     <section class="project">
-      <h3>⚙️ Actuator Analysis &amp; Free‑Body Diagrams</h3>
+      <h3>⚙️ Actuator Analysis &amp; Free-Body Diagrams</h3>
       <p>
-        Joints use actuators designed to mimic human force & motion control. Uses BLDC FOC & high efficiency gearing.
+        Joints use actuators designed to mimic human force & motion control. BLDC FOC and high‑efficiency gearing keep them compact and responsive.
       </p>
 
-      <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
+      <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
       <figcaption>
-        Optimized to minimize BOM cost. Uses commodity parts, bearings and PLA plastic parts. BOM cost of <strong> $300 </strong> per actuator. vs. $8000 for COTS
+        Optimized to minimize BOM. Commodity bearings and PLA keep each unit under <strong>$300</strong>—versus ~$8 k for comparable COTS.
       </figcaption>
-      
+
       <p>
-        Structural analysis safeguards a <strong>30 Nm continuous</strong> /
-        <strong>90 Nm peak</strong> torque envelope.
+        Structural analysis safeguards a <strong>30 Nm continuous</strong> / <strong>90 Nm peak</strong> torque envelope.
       </p>
       <img class="full-img" src="assets/actuators/Freebodydiagram1.JPG" alt="Hand‑drawn free‑body diagram resolving gear forces" />
-      
+
       <figcaption>
-        Free‑body checks back up the FEA—everything under yield with
-        2.1× safety.
+        Free‑body checks confirm FEA: &gt;2× safety factor.
       </figcaption>
     </section>
 
@@ -107,72 +116,54 @@
     <section class="project">
       <h3>🖼️ Full‑Body Cross‑Sections</h3>
       <p>
-        Chassis packages battery, power distribution, IMU, computer, wire manifolding
+        Chassis routes battery, power distribution, IMU, compute, and wiring looms in a minimal envelope.
       </p>
       <div class="image-gallery">
-         <img src="assets/actuators/Picture2.jpg" alt="Robot cross‑section – front elevation" />
-         <img src="assets/actuators/Picture3.jpg" alt="Robot cross‑section – side elevation" />
+        <img src="assets/actuators/Picture2.jpg" alt="Robot cross‑section – front elevation" />
+        <img src="assets/actuators/Picture3.jpg" alt="Robot cross‑section – side elevation" />
       </div>
 
       <p>
-        Actuators are integrated into serial rotary chains. 4 branches.
+        Actuators mount in serial rotary chains—four branches.
       </p>
 
-
       <div class="image-gallery">
-        
-
-
         <img src="assets/actuators/Picture5.jpg" alt="Robot cross‑section – front elevation" />
         <img src="assets/actuators/Picture6.jpg" alt="Robot cross‑section – side elevation" />
         <img src="assets/actuators/Picture7.jpg" alt="Robot cross‑section – isometric" />
       </div>
-      <figcaption> Routing of wires, connectors</figcaption>
+      <figcaption>Wiring and connector routing.</figcaption>
     </section>
 
-    
     <!-- Videos -->
     <section class="project">
       <p>
-        Uses RL for walking control. Robots learn to walk in simulation and a neural net is transferred from sim to real. Optimized to inference on edge hardware under 5ms
+        Reinforcement‑learning locomotion trained in simulation, transferred to hardware. Inference runs under 5 ms on edge hardware.
       </p>
       <div class="video-gallery">
-        <iframe
-          src="https://www.youtube.com/embed/-KSJEGBW04A"
-          title="Biped walking – early test"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        <iframe
-          src="https://www.youtube.com/embed/6M4V2va83pI"
-          title="Reinforcement learning locomotion clip"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+        <iframe src="https://www.youtube.com/embed/-KSJEGBW04A" title="Biped walking – early test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/6M4V2va83pI" title="Reinforcement learning locomotion clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-      <figcaption>Motion control algorithms developed in NVIDIA Isaac Gym and transferred to hardware.</figcaption>
-   </section>
+      <figcaption>Motion control developed in NVIDIA Isaac Gym, then deployed to physical robot.</figcaption>
+    </section>
 
-
-    
     <!-- Actuator glam -->
     <section class="project">
       <h3>📸 As‑Built Actuator Gallery</h3>
       <div class="image-gallery">
         <img src="assets/actuators/actuator5.jpg" alt="Assembled servo – front" />
-        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed showing reduction stages" />
+        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed—showing reduction stages" />
         <img src="assets/actuators/actuator7.jpg" alt="Torque sensor and magnetic encoder detail" />
       </div>
-      <figcaption>Final hardware after 2h bench endurance</figcaption>
+      <figcaption>Bench‑tested for 2 h continuous duty.</figcaption>
     </section>
 
     <!-- Rocket Test Stands -->
     <section class="project">
       <h3>🚀 UT Dallas – Bates Propulsion Labs Rocket Team</h3>
       <p>
-        <strong>Test Stand Design &amp; Fabrication</strong><br />
-        Designed and built structural test rigs for rocket propulsion systems.<br />
-        Load calculations, welds, and sensor integration.
+        <strong>Test Stand Design &amp; Fabrication</strong><br />
+        Built structural rigs for rocket propulsion—load calcs, welding, and sensor integration.
       </p>
 
       <div class="image-gallery">
@@ -182,43 +173,22 @@
       <figcaption>From CAD to hot‑fire in six months—no cracked welds.</figcaption>
     </section>
 
-
-     <div class="video-gallery">
-      <iframe
-        src="https://www.youtube.com/embed/0VU4w6sr3rM"
-        title="Rocket Engine Test"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+    <div class="video-gallery">
+      <iframe src="https://www.youtube.com/embed/0VU4w6sr3rM" title="Rocket Engine Test" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <figcaption>Static fire test video.</figcaption>
 
     <!-- GD&T -->
     <section class="project">
-      <h3>📐 GD&amp;T &amp; Made & delivered a rawing for a Water Jacket for Rocket Engine</h3>
+      <h3>📐 Water Jacket Machining Drawing</h3>
       <p>
-        GD&amp;T   <strong>0.25 mm profile tolerance</strong> on
-        lathe
+        Generated GD&T drawing with <strong>0.25 mm profile tolerance</strong> for lathe work on a rocket engine water jacket.
       </p>
-
       <div class="image-gallery">
         <img src="assets/rocket/rocket7.jpg" alt="Water jacket CAD section" />
-       
+      </div>
+    </section>
 
-      </section>
-
-    
     <!-- FIRST Robotics -->
     <section class="project">
-      <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
-      <p>
-        Led mechanical sub‑team for drivetrain and manipulator; iterated from whiteboard to final bot in
-        <strong>45 days</strong>.
-      </p>
-
-      <div class="image-gallery">
-        <img src="assets/robots/robot8.jpg" alt="FRC robot climbing in end‑game" />
-       
-      </div>
-      <figcaption>Ranked 5 at Houston Champs.</figcaption>
-    </section>
+      <h3>🏆 FIRST Robotics – 5th Place, World Championship</
