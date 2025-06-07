@@ -8,23 +8,28 @@
 
   <!-- Quick-override tweaks for extra breathing room & larger media -->
   <style>
-    section.resume {
-      margin: 2rem 0 3rem;
-      text-align: center;
+    /* Lay out the header items side-by-side */
+    .page-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
-    .resume-btn {
-      display: inline-block;
-      padding: 0.8rem 1.4rem;
-      border: 1px solid #3fb950;
-      border-radius: 6px;
-      background: #238636;
-      color: #f0f6fc;
-      font-weight: 600;
+    
+    /* Minimal, low-key link */
+    .resume-link {
+      font-size: 0.9rem;
+      padding: 0.45rem 0.9rem;
+      border: 1px solid #30363d;
+      border-radius: 4px;
+      color: #79c0ff;
       text-decoration: none;
-      transition: background 0.2s ease-in-out;
+      background: transparent;
+      transition: background 0.15s ease-in-out;
     }
-    .resume-btn:hover {
-      background: #2ea043;
+    .resume-link:hover {
+      background: #21262d;
     }
     
     section.project {
@@ -85,18 +90,17 @@
       <p>Hi, I’m Chris, an electrical engineer with a track record in robotics, power electronics, and rocket test rigs. I’m pivoting toward mechanical design and actively hunting for mechanically focused roles as I apply for a Mechanical Engineering master’s program starting in 2026.</p>
     </section>
     
-    <header>
-      <h1><strong>Chris Vallone</strong></h1>
-      <h2>Ongoing Projects in <strong>Robotics</strong>, <strong>Mechanical Design</strong> &amp; <strong>Embedded Systems</strong></h2>
+    <!-- Header -->
+    <header class="page-header">
+      <div>
+        <h1><strong>Chris Vallone</strong></h1>
+        <h2>Ongoing Projects in <strong>Robotics</strong>, <strong>Mechanical Design</strong> &amp; <strong>Embedded Systems</strong></h2>
+      </div>
+    
+      <!-- Subtle resume link -->
+      <a class="resume-link" href="assets/Chris_Vallone_Resume.pdf" download>Resume PDF</a>
     </header>
 
-    <!-- Resume Download -->
-    <section class="resume">
-      <a class="resume-btn" href="assets/Chris_Vallone_Resume.pdf" download>
-        📄 Download My Resume
-      </a>
-    </section>
-    
     <!-- Humanoid Robots & Actuators -->
     <section class="project">
       <h3>🔧 Humanoid Robots &amp; Custom Actuators</h3>
