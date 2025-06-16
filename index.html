@@ -8,7 +8,7 @@
 
   <!-- Quick-override tweaks for extra breathing room & larger media -->
   <style>
-    /* Lay out the header items side-by-side */
+    /* Lay out the header items side‑by‑side */
     .page-header {
       display: flex;
       flex-wrap: wrap;
@@ -16,8 +16,8 @@
       align-items: center;
       gap: 1rem;
     }
-    
-    /* Minimal, low-key link */
+
+    /* Minimal, low‑key link */
     .resume-link {
       font-size: 0.9rem;
       padding: 0.45rem 0.9rem;
@@ -31,7 +31,7 @@
     .resume-link:hover {
       background: #21262d;
     }
-    
+
     section.project {
       margin: 4rem 0;
       padding-bottom: 2rem;
@@ -62,7 +62,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     }
-    /* Full-width analysis images */
+    /* Full‑width analysis images */
     .full-img {
       width: 100%;
       max-width: 980px;
@@ -85,7 +85,7 @@
 </head>
 <body>
   <main class="container">
-    
+
     <!-- Intro note -->
     <section class="objective">
       <p>Hi, I’m Chris, an electrical engineer with a track record in robotics, power electronics, and rocket test rigs. I’m pivoting toward mechanical design and actively hunting for mechanically focused roles as I apply for a Mechanical Engineering master’s program starting in 2026.</p>
@@ -98,7 +98,6 @@
         <h1><strong>Chris Vallone</strong></h1>
         <h2>Ongoing Projects in <strong>Robotics</strong>, <strong>Mechanical Design</strong> &amp; <strong>Embedded Systems</strong></h2>
       </div>
-    
     </header>
 
     <!-- Humanoid Robots & Actuators -->
@@ -112,7 +111,7 @@
       </ul>
 
       <div class="image-gallery">
-        <img src="assets/robots/robot2.jpg" alt="Close-up of knee actuator test rig" />
+        <img src="assets/robots/robot2.jpg" alt="Close‑up of knee actuator test rig" />
       </div>
 
       <ul>
@@ -120,11 +119,11 @@
       </ul>
     </section>
 
-    <!-- Analysis -->
+    <!-- Actuator Analysis -->
     <section class="project">
-      <h3>⚙️ Actuator Analysis &amp; Free-Body Diagrams</h3>
+      <h3>⚙️ Actuator Analysis &amp; Free‑Body Diagrams</h3>
       <p>
-        Joints use actuators designed to mimic human force & motion control. BLDC FOC and high‑efficiency gearing keep them compact and responsive.
+        Joints use actuators designed to mimic human force &amp; motion control. BLDC FOC and high‑efficiency gearing keep them compact and responsive.
       </p>
 
       <img class="full-img" src="assets/actuators/actuatordiagram1.JPG" alt="Von Mises stress plot of planetary carrier" />
@@ -141,6 +140,22 @@
         Free‑body checks confirm FEA: &gt;2× safety factor.
       </figcaption>
     </section>
+
+    <!-- Actuator Glam -->
+    <section class="project">
+      <h3>📸 As‑Built Actuator Gallery</h3>
+      <div class="image-gallery">
+        <img src="assets/actuators/actuator5.jpg" alt="Assembled servo – front" />
+        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed—showing reduction stages" />
+        <img src="assets/actuators/actuator7.jpg" alt="Torque sensor and magnetic encoder detail" />
+        <img src="assets/actuators/actuator8.jpg" alt="Actuator – exploded view" />
+        <img src="assets/actuators/actuator9.jpg" alt="Actuator – PCB and Hall sensor" />
+        <img src="assets/actuators/actuator10.jpg" alt="Actuator – dynamic torque test" />
+      </div>
+      <figcaption>Bench‑tested for 2 h continuous duty.</figcaption>
+    </section>
+
+    
 
     <!-- Cross sections -->
     <section class="project">
@@ -177,17 +192,6 @@
       <figcaption>Motion control developed in NVIDIA Isaac Gym, then deployed to physical robot.</figcaption>
     </section>
 
-    <!-- Actuator glam -->
-    <section class="project">
-      <h3>📸 As‑Built Actuator Gallery</h3>
-      <div class="image-gallery">
-        <img src="assets/actuators/actuator5.jpg" alt="Assembled servo – front" />
-        <img src="assets/actuators/actuator6.jpg" alt="Rear cover removed—showing reduction stages" />
-        <img src="assets/actuators/actuator7.jpg" alt="Torque sensor and magnetic encoder detail" />
-      </div>
-      <figcaption>Bench‑tested for 2 h continuous duty.</figcaption>
-    </section>
-
     <!-- Rocket Test Stands -->
     <section class="project">
       <h3>🚀 UT Dallas – Bates Propulsion Labs Rocket Team</h3>
@@ -208,7 +212,27 @@
     </div>
     <figcaption>Static fire test video.</figcaption>
 
-    <!-- GD&T -->
+
+    <!-- Induction Metal 3D Printer -->
+    <section class="project">
+      <h3>🧲 Induction Metal 3D Printer</h3>
+      <ul>
+        <li>Experimental direct‑energy deposition rig extruding aluminum wire</li>
+        <li>Induction‑heated steel core with molybdenum nozzle (Ø0.4 mm) operates at&nbsp;~400 ℃ build plate</li>
+        <li>Aims to accelerate prototyping of lightweight structural parts</li>
+      </ul>
+      <div class="image-gallery">
+        <img src="assets/3dprinter/3dprinter1.jpg" alt="Induction 3D printer extrusion head – front view" />
+        <img src="assets/3dprinter/3dprinter2.jpg" alt="Induction 3D printer extrusion head – side view" />
+      </div>
+      <div class="video-gallery">
+        <iframe src="https://www.youtube.com/embed/VL_3Rwfu4BQ" title="Aluminum extrusion onto heated surface" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption>Live clip of 0.4 mm aluminum bead deposition.</figcaption>
+    </section>
+
+
+        <!-- GD&T -->
     <section class="project">
       <h3>📐 Water Jacket Machining Drawing</h3>
       <p>
@@ -218,12 +242,16 @@
         <img src="assets/rocket/rocket7.jpg" alt="Water jacket CAD section" />
       </div>
     </section>
-
+    
     <!-- FIRST Robotics -->
     <section class="project">
       <h3>🏆 FIRST Robotics – 5th Place, World Championship</h3>
       <div class="image-gallery">
-        <img src="assets/robots/robot8.jpg" alt="" />
+        <img src="assets/robots/robot8.jpg" alt="FIRST Robotics competition robot" />
       </div>
-      <p>Designed & built competitive robot for international competition.<br>
+      <p>Designed &amp; built competitive robot for international competition.</p>
     </section>
+
+  </main>
+</body>
+</html>
